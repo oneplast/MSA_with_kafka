@@ -1,6 +1,6 @@
 package com.river.demo.domain.accounts.api;
 
-import com.river.demo.common.model.web.BaseResponse;
+import com.river.core.model.web.BaseResponse;
 import com.river.demo.domain.accounts.mapper.AccountMapper;
 import com.river.demo.domain.accounts.model.dto.AccountDescription;
 import com.river.demo.domain.accounts.model.dto.AccountDetail;

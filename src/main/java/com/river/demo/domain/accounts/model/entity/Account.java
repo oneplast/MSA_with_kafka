@@ -1,12 +1,20 @@
 package com.river.demo.domain.accounts.model.entity;
 
-import com.river.demo.common.model.persistence.BaseEntity;
+import com.river.core.model.persistence.BaseEntity;
 import com.river.demo.domain.accounts.model.vo.Role;
-import jakarta.persistence.*;
-import lombok.*;
-
+import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
 import java.util.ArrayList;
 import java.util.List;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @Entity

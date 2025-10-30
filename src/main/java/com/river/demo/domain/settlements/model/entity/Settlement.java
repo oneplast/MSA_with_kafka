@@ -1,14 +1,15 @@
 package com.river.demo.domain.settlements.model.entity;
 
-import com.river.demo.common.model.persistence.BaseEntity;
-
+import com.river.core.model.persistence.BaseEntity;
 import com.river.demo.domain.settlements.model.vo.SettlementStatus;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import lombok.*;
-
 import java.time.LocalDateTime;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
 @Entity

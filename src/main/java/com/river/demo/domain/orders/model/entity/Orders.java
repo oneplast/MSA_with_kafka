@@ -1,15 +1,18 @@
 package com.river.demo.domain.orders.model.entity;
 
-import com.river.demo.common.model.persistence.BaseEntity;
+import com.river.core.model.persistence.BaseEntity;
 import com.river.demo.domain.orders.model.vo.OrderState;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.OneToMany;
-import lombok.*;
-
 import java.util.ArrayList;
 import java.util.List;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @Entity

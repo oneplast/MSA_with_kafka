@@ -1,4 +1,4 @@
-package com.river.demo.common.model.web;
+package com.river.core.model.web;
 
 public record BaseResponse<T>(
         T data,

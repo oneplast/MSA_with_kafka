@@ -1,8 +1,11 @@
 package com.river.demo.domain.deposits.model.entity;
 
-import com.river.demo.common.model.persistence.BaseEntity;
-import com.river.demo.domain.accounts.model.entity.Account;
-import jakarta.persistence.*;
+import com.river.core.model.persistence.BaseEntity;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

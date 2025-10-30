@@ -1,6 +1,6 @@
 package com.river.demo.domain.payments.api;
 
-import com.river.demo.common.model.web.BaseResponse;
+import com.river.core.model.web.BaseResponse;
 import com.river.demo.domain.payments.mapper.PaymentMapper;
 import com.river.demo.domain.payments.model.dto.PaymentRequest;
 import com.river.demo.domain.payments.model.entity.Payment;

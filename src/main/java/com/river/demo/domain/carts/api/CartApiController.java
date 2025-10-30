@@ -1,6 +1,6 @@
 package com.river.demo.domain.carts.api;
 
-import com.river.demo.common.model.web.BaseResponse;
+import com.river.core.model.web.BaseResponse;
 import com.river.demo.domain.carts.mapper.CartMapper;
 import com.river.demo.domain.carts.model.dto.CartDescription;
 import com.river.demo.domain.carts.model.dto.CartItemDescription;

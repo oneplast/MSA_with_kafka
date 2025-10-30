@@ -1,6 +1,6 @@
 package com.river.demo.domain.orders.api;
 
-import com.river.demo.common.model.web.BaseResponse;
+import com.river.core.model.web.BaseResponse;
 import com.river.demo.domain.orders.mapper.OrderMapper;
 import com.river.demo.domain.orders.model.dto.OrderDescription;
 import com.river.demo.domain.orders.model.entity.Orders;

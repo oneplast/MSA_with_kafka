@@ -1,6 +1,6 @@
 package com.river.demo.domain.deposits.model.entity;
 
-import com.river.demo.common.model.persistence.BaseEntity;
+import com.river.core.model.persistence.BaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import lombok.AccessLevel;

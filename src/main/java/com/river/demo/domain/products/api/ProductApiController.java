@@ -1,7 +1,7 @@
 package com.river.demo.domain.products.api;
 
-import com.river.demo.common.model.web.BaseResponse;
-import com.river.demo.common.model.web.PageResponse;
+import com.river.core.model.web.BaseResponse;
+import com.river.core.model.web.PageResponse;
 import com.river.demo.domain.products.mapper.ProductMapper;
 import com.river.demo.domain.products.model.dto.ProductDescription;
 import com.river.demo.domain.products.model.dto.UpsertProductRequest;
@@ -17,7 +17,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
-import java.security.Principal;
 import java.util.List;
 
 @Slf4j
