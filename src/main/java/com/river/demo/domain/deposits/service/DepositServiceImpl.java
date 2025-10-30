@@ -1,6 +1,5 @@
 package com.river.demo.domain.deposits.service;
 
-import com.river.demo.domain.accounts.model.entity.Account;
 import com.river.demo.domain.deposits.model.entity.Deposit;
 import com.river.demo.domain.deposits.model.entity.DepositHistory;
 import com.river.demo.domain.deposits.repository.DepositHistoryRepository;
