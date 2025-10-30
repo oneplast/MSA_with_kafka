@@ -1,7 +1,7 @@
 spring:
 
   application:
-    name: demo
+    name: demo-service
 
   jpa:
     hibernate:
