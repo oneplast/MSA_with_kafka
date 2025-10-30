@@ -1,5 +1,6 @@
-package com.river.accountservice.service;
+package com.river.accountservice.service.impl;
 
+import com.river.accountservice.service.TokenProvider;
 import com.river.core.model.vo.TokenBody;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
