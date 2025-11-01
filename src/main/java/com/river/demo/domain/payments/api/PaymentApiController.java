@@ -11,9 +11,9 @@ import com.river.demo.domain.payments.model.vo.PaymentType;
 import com.river.demo.domain.payments.service.PaymentService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,7 +27,8 @@ public class PaymentApiController {
 
     @PostMapping("/process")
     public BaseResponse<PaymentDescription> processPayment(
-            @AuthenticationPrincipal(expression = "accountCode") String accountCode,
+//            @AuthenticationPrincipal(expression = "accountCode") String accountCode,
+            @RequestHeader("X-CODE") String accountCode,
             @RequestBody @Valid PaymentConfirmRequest request
     ) {
 
@@ -42,7 +43,8 @@ public class PaymentApiController {
 
     @PostMapping("/toss")
     public BaseResponse<PaymentDescription> tossPayment(
-            @AuthenticationPrincipal(expression = "accountCode") String accountCode,
+//            @AuthenticationPrincipal(expression = "accountCode") String accountCode,
+            @RequestHeader("X-CODE") String accountCode,
             @RequestBody @Valid PaymentConfirmRequest request
     ) {
 
@@ -58,7 +60,8 @@ public class PaymentApiController {
 
     @PostMapping("/deposit")
     public BaseResponse<PaymentDescription> depositPayment(
-            @AuthenticationPrincipal(expression = "accountCode") String accountCode,
+//            @AuthenticationPrincipal(expression = "accountCode") String accountCode,
+            @RequestHeader("X-CODE") String accountCode,
             @RequestBody @Valid DepositPaymentRequest request
     ) {
 

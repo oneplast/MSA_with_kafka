@@ -5,6 +5,62 @@ spring:
   application:
     name: gateway-service
 
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: auth-sign-in
+              uri: lb://ACCOUNT-SERVICE
+              predicates:
+                - Path=/login
+                - Method=POST
+
+            - id: auth-sign-out
+              uri: lb://ACCOUNT-SERVICE
+              predicates:
+                - Path=/logout
+                - Method=POST
+
+            - id: accounts-sign-in
+              uri: lb://ACCOUNT-SERVICE
+              predicates:
+                - Path=/accounts
+                - Method=POST
+
+            - id: accounts-service-protected
+              uri: lb://ACCOUNT-SERVICE
+              predicates:
+                - Path=/accounts/**
+                - Method=GET, POST, PATCH, PUT, DELETE
+              filters:
+                - TokenAuthenticationFilter
+
+            - id: demo-service-protected-1
+              uri: lb://DEMO-SERVICE
+              predicates:
+                - Path=/carts/**
+              filters:
+                - TokenAuthenticationFilter
+
+            - id: demo-service-protected-2
+              uri: lb://DEMO-SERVICE
+              predicates:
+                - Path=/**
+                - Method=POST, PATCH, PUT, DELETE
+              filters:
+                - TokenAuthenticationFilter
+
+            - id: demo-service-public
+              uri: lb://DEMO-SERVICE
+              predicates:
+                - Path=/**
+                - Method=GET
+
 custom:
   jwt:
     secret-key: A5A10BC17B4E653C78BDD55FFFD9DEE3BE5790CD6F3F64DC1E82E791F9821C17
+
+eureka:
+  instance:
+    instance-id: "${spring.application.name}:${server.port}:${random.uuid}"

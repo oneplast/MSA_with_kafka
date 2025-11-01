@@ -8,8 +8,13 @@ import com.river.demo.domain.orders.model.vo.CreateOrderRequest;
 import com.river.demo.domain.orders.service.OrderService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
@@ -20,7 +25,8 @@ public class OrderApiController {
 
     @PostMapping
     public BaseResponse<OrderDescription> create(
-            @AuthenticationPrincipal(expression = "accountCode") String accountCode,
+//            @AuthenticationPrincipal(expression = "accountCode") String accountCode,
+            @RequestHeader("X-CODE") String accountCode,
             @RequestBody @Valid CreateOrderRequest request
     ) {
 
@@ -35,7 +41,8 @@ public class OrderApiController {
 
     @GetMapping("/{orderCode}")
     public BaseResponse<OrderDescription> getDescription(
-            @AuthenticationPrincipal(expression = "accountCode") String accountCode,
+//            @AuthenticationPrincipal(expression = "accountCode") String accountCode,
+            @RequestHeader("X-CODE") String accountCode,
             @PathVariable String orderCode
     ) {
 
