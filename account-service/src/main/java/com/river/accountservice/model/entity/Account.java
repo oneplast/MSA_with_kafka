@@ -31,11 +31,11 @@ public class Account extends BaseEntity {
     private String email;
 
     @Setter
-    @Column(unique = true, nullable = false)
+//    @Column(unique = true, nullable = false)
     private String cartCode;
 
     @Setter
-    @Column(unique = true, nullable = false)
+//    @Column(unique = true, nullable = false)
     private String depositCode;
 
     @Enumerated(EnumType.STRING)

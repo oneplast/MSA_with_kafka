@@ -17,8 +17,6 @@ import org.springframework.web.cors.CorsUtils;
 @RequiredArgsConstructor
 public class SecurityConfiguration {
 
-//    private final TokenAuthenticationFilter tokenAuthenticationFilter;
-
     @Bean
     public SecurityFilterChain securityFilterChain(
             HttpSecurity http,
@@ -63,9 +61,6 @@ public class SecurityConfiguration {
                                                             .anyRequest()
                                                                 .authenticated()
                 )
-
-//                .addFilterBefore(tokenAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
-
                 .build();
 
     }
